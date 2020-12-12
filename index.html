@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Meddon&family=Pacifico&family=Schoolbell&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Nerko+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Indie+Flower&family=Nerko+One&family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Niconne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+	#btn3
+	{
+		height: 60px;
+		width: 200px;
+	}
+	#btn2
+	{
+		height: 60px;
+		width: 200px;
+	}
+	#btn1
+	{
+		height: 60px;
+		width: 200px;
+	}
+	.container-fluid
+	{
+		height: auto;
+		width: 100%;
+	}
+	h1
+	{
+		padding-left: 200px;
+		font-size: 60px;
+		padding-top: 5%;
+		font-family: 'Nerko One', cursive;
+		opacity: .8;
+	}
+	.img
+	{
+		height: 175px;
+		width: 190px;
+		margin-left: 150px;
+	}
+	#sect
+	{
+		height: auto;
+		width: 100%;
+		margin-left: 0px!important;
+		margin-right: 0px!important;
+	}
+	
+	.mag
+	{
+		background-image: url(https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=891&q=80);
+		height: 650px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-left: 0px!important;
+		margin-right: 0px!important;
+	}
+	p
+	{
+		font-family: 'Schoolbell', cursive;
+		font-size: 40px;
+		color: #000000;
+	}
+	#p2
+	{
+		text-align: center;
+		font-family: 'Niconne', cursive;
+		color: #3D5C69;
+		font-size: 80px;
+	}
+	#p1
+	{
+		font-family: 'Quicksand', sans-serif;
+		padding-left: 400px;
+		font-size:50px;
+		opacity: .8;
+	}
+	::placeholder {
+  color:black;
+ font-family: 'Meddon', cursive;
+  opacity: .5; / Firefox /
+}
+
+:-ms-input-placeholder { / Internet Explorer 10-11 /
+ color: red;
+}
+
+::-ms-input-placeholder { / Microsoft Edge /
+ color: red;
+}
+	</style>
+
+<body>
+	<section id="sect">
+	<div class="container-fluid mag">
+		<div>
+			<form>
+		<h1><img src="XDZT-unscreen (1).gif" class="img">MAGIC 8 BALL</h1>
+		<input type="text" placeholder="YoUr NaMe!!" id="nm" style="margin-left:34%;outline: none;border:none;background:none;font-size: 40px;color: #000000;font-family: 'Cinzel', serif;"><br>
+		<input type="text" placeholder="Ask ME Anything!!" id="ask" style="margin-left:24%;outline: none;border:none;background:none;font-size: 40px;font-color: #000000;font-family: 'Cinzel', serif;">
+		<button type="button" class="btn btn-outline-info" onclick="fun();" type="button" id="btn1" style="margin-top: 8%;color: black;">Know Your Future</button>
+		<p id="p1"></p>
+		<button class="btn btn-outline-info"  onclick="del();" id="btn2" type="button" style="margin-left: 70%;color: black;margin-top: 1%;">QUIT</button>
+		<p id="p2"></p>
+		<button class="btn btn-outline-info"  onclick="del();" id="btn3" style="margin-left: 70%;color: black;margin-top: 1%;">Play Again</button>
+		
+		</div>
+	</div>
+</form>
+</section>
+<script>
+	
+	var arr=["It is certain.","It is decidedly so.","Reply hazy try again.","Cannot predict now.","Do not count on it.","My sources say no.","Outlook not so good.","Signs point to yes.","Without a doubt.","Yes – definitely.","You may rely on it.","As I see it, yes.","Most likely.","Yes.","Better not tell you now.","Concentrate and ask again.","My sources say no.","Very doubtful."]
+	
+	function fun(){
+	// var x=document.getElementById("nm").value;
+	// var y=document.getElementById("ask").value;
+	
+	// for(i=0;i<arr.length;i++)
+ var show=document.getElementById("nm").value;
+		var c=arr[Math.floor(Math.random()*17)];
+		console.log(c);
+		//document.getElementById("p1").innerHTML="Analysing..................";
+		document.getElementById("nm").value="Welcome"+" "+show;
+		 document.querySelector('.container-fluid').style.backgroundImage=" url('https://media0.giphy.com/media/11FuEnXyGsXFba/source.gif')";
+		 document.querySelector('.container-fluid').style.backgroundSize="1360px,500px";
+		  document.getElementById("ask").value=" ";
+		 
+document.getElementById("p1").innerHTML=" ";
+
+		 // setTimeout(() => { document.querySelector('.container-fluid').style.backgroundImage=" url('')", 2000};
+		 setTimeout(() => { document.getElementById("p1").innerHTML=c;}, 2000);
+		  setTimeout(() => {  document.querySelector('.container-fluid').style.backgroundImage="url(https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=891&q=80)";}, 2000);
+		  setTimeout(() => { document.getElementById("ask").value=" ";}, 2000);	
+		 setTimeout(() => {  document.getElementById("nm").value="";}, 2000);	
+		 //document.getElementById(".container-fluid").style.paddingLeft = "150px";
+		 
+
+		
+		
+	// document.getElementById("ask").value=c;
+}
+function del()
+{
+	document.querySelector('.container-fluid').style.backgroundImage=" url('https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=891&q=80')";
+	document.getElementById("p1").value="";
+	p1.style.display='none';
+	document.getElementById("nm").value="";
+	nm.style.display='none';
+	document.getElementById("ask").value="";
+	ask.style.display='none';
+	btn1.style.display='none';
+	btn2.style.display='none';
+	btn3.style.visibility='visible';
+	setTimeout(() => { document.getElementById("p2").innerHTML="Your Hard Work Is Your Fortune!!!!!"}, 1000);
+	setTimeout(() => { document.getElementById("p2").innerHTML="Your Hard Work Is Your Fortune!!!!!"}, 1000);
+
+}
+	btn3.style.visibility='hidden';
+	</script>
+</body>
+</html>
